@@ -1,0 +1,25 @@
+pipeline {
+    agent {
+        label 'tamz2'
+    }
+
+    stages {
+
+        stage('Build') {
+            steps {
+                sh 'yarn'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh 'pm2 stop -s teeamz-backend-master || :'
+                sh 'sleep 3s'
+                sh 'pm2 delete -s teeamz-backend-master || :'
+                sh 'sleep 2s'
+                sh 'NODE_ENV=production pm2 start index.js --name teeamz-backend-master -i 4 || :'
+                sh 'NODE_ENV=production pm2 reload teeamz-backend-master --update-env || :'
+            }
+        }
+    }
+}
