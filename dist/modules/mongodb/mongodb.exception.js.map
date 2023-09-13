@@ -1,0 +1,1 @@
+{"version":3,"file":"mongodb.exception.js","sourceRoot":"","sources":["../../../src/modules/mongodb/mongodb.exception.ts"],"names":[],"mappings":";;;AAAA,MAAa,sBAAuB,SAAQ,KAAK;IAC/C,YAAY,OAAe;QACzB,KAAK,CAAC,OAAO,CAAC,CAAC;QACf,IAAI,CAAC,IAAI,GAAG,wBAAwB,CAAC;IACvC,CAAC;CACF;AALD,wDAKC"}
